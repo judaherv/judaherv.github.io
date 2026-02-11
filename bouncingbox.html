@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>bouncing box</title>
+  </head>
+  <body>
+    <canvas id="canvas" height="800" width="900"></canvas>
+  </body>
+</html>
+<script>
+  let canvas = document.getElementById("canvas");
+  let ctx = canvas.getContext("2d");
+  let x = 0;
+  let y = 0;
+  let direction = 6
+  ctx.fillRect(x, y, 50, 50);
+  setInterval(moveBox, 16);
+
+  function moveBox() {
+    //box changing x and y by 35
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    x = x + direction;
+    y = y + 35;
+    ctx.fillRect(x, y, 50, 50);
+ 
+
+  }
+</script>

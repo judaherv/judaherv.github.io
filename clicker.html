@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <title>Triple T clicker</title>
+</head>
+<body>
+   <h1 id="score">Score=0</h1>
+<img id="Img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAOHQrUZVRDpDaqefw6nK5g6NFakpfJPXVkaWvrtHWYrU0BG00:https://preview.redd.it/did-epic-add-tung-tung-sahur-also-known-as-triple-t-v0-7393ud3tbi7g1.jpg%3Fwidth%3D224%26format%3Dpjpg%26auto%3Dwebp%26s%3D4d7f77e63e526bd18b163adc4f0c35c436e47bb7&s">
+
+</body>
+</html>
+<script>
+//click the <img> tag, score=score+1
+let score=0
+document.getElementById("Img").addEventListener("click",scoreGoUp)
+//when you click, score go up, and you see it
+document.getElementById("score").innerText="hello"
+function scoreGoUp(){
+  score=score+1
+  document.getElementById("score").innerText=score
+}
+
+</script>
