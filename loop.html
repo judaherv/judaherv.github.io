@@ -14,31 +14,20 @@
   let ctx = canvas.getContext("2d");
   let x = 0;
   let y = 0;
-  let directionx = 6
-  let directiony = 6
-  ctx.fillRect(x, y, 50, 50);
+  let direction = 6
+ 
   setInterval(moveBox, 16);
 
   function moveBox() {
     //box changing x and y by 35
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    x = x + directionx;
-    y = y + directiony;
+    for(var i=0; i<10; i=i+1){
+        console.log(i)
+         ctx.fillRect(x+i*67, y+1*67, 50, 50);
+         x=x+5
+    }
     ctx.fillRect(x, y, 50, 50);
  
-
-    if(x > 900){
-      directionx = -directionx
-    }
-    if(x < 0){
-      directionx = -directionx
-    }
-    if(y > 700){
-      directiony = -directiony
-    }
-    if(y < 0){
-      directiony = -directiony
-    }
 
   }
 </script>
